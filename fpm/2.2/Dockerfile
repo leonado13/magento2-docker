@@ -33,7 +33,6 @@ RUN chsh -s /bin/bash www-data
 
 RUN chown -R www-data:www-data /var/www
 
-RUN a2enmod rewrite
 RUN echo "memory_limit=2048M" > /usr/local/etc/php/conf.d/memory-limit.ini
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
